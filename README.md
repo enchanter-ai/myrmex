@@ -32,7 +32,7 @@ myrmex sits between an Unblocker and an AI Parser and answers one question about
 
 ## Origin
 
-**Myrmex** takes its name from the ant of the **Ice and Fire** mod — the same bestiary the sibling products draw from ([cyclops](https://github.com/enchanter-ai/cyclops), Gorgon, Hydra, Lich). A colony's soldiers know their hive-mates by scent and turn away anything that lacks it at the mouth of the nest, no matter how convincingly it moves. myrmex stands at the mouth of the pipeline and does the same: it runs one recognition test on every response — *does this carry the markers of real data?* — and refuses a soft-block, challenge, decoy, or drifted layout before it reaches the AI Parser. It does not fetch, render, or decide what to scrape next; it watches *that*, and nothing more.
+**Myrmex** takes its name from **Ice and Fire** — an ant whose colony soldiers know their hive-mates by scent and turn away at the mouth of the nest anything that lacks it, no matter how convincingly it moves. myrmex stands at the mouth of the pipeline and does the same: it runs one recognition test on every response and refuses a soft-block, challenge, decoy, or drifted layout — anything without the scent of real data — before it reaches the AI Parser.
 
 The question this project answers: *Is this response real data, or a silent failure dressed as HTTP 200?*
 
