@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: "Myrmex"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - name: "Enchanter Labs"
+    affiliation: "enchanter-ai"
+repository-code: "https://github.com/enchanter-ai/myrmex"
+url: "https://github.com/enchanter-ai/myrmex"
+license: MIT
+version: "0.1.0"
+date-released: "2026-08-12"
+abstract: "A deterministic, model-free soft-block / silent-scrape oracle — the MCP-native trust-gate between a scraper's Unblocker and its AI Parser. Scores a single HTTP response against six deterministic features and a JSON signature file, returning one of five verdicts (REAL, SOFT_BLOCK, CHALLENGE, DECOY_EMPTY, LAYOUT_DRIFT) with a full explainable feature trace. No model in the decision path."
+keywords:
+  - mcp
+  - web-scraping
+  - anti-bot
+  - soft-block
+  - silent-failure
+  - deterministic
+  - trust-gate
