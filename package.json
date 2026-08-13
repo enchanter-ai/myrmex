@@ -1,0 +1,52 @@
+{
+  "name": "@enchanter-ai/myrmex",
+  "version": "0.1.0",
+  "description": "Deterministic, model-free soft-block / silent-scrape oracle — the trust-gate between an Unblocker and an AI Parser.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Enchanter Labs",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "myrmex-serve": "./dist/bin/myrmex-serve.js",
+    "myrmex-mcp": "./dist/bin/myrmex-mcp.js"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "test": "vitest run",
+    "bench": "tsx bench/run.ts",
+    "serve": "npm run build && node dist/service/server.js",
+    "dev:serve": "tsx src/service/server.ts",
+    "mcp": "tsx bin/myrmex-mcp.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.7",
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "cheerio": "^1.0.0",
+    "hono": "^4.6.14",
+    "pino": "^9.5.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.10.2",
+    "pino-pretty": "^13.0.0",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

@@ -1,0 +1,15 @@
+node_modules/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.local
+.env
+out/
+graphify-out/
+.ua/
+.understand-anything/
