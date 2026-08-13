@@ -1,0 +1,122 @@
+{
+  "vendors": [
+    {
+      "vendor": "cloudflare-challenge",
+      "implies": "CHALLENGE",
+      "bodyMarkers": [
+        "Just a moment",
+        "Checking your browser before accessing",
+        "challenge-platform",
+        "cf_chl_opt",
+        "window._cf_chl_opt",
+        "cf-chl-bypass",
+        "Enable JavaScript and cookies to continue"
+      ],
+      "headerMarkers": [{ "name": "cf-mitigated", "contains": "challenge" }]
+    },
+    {
+      "vendor": "cloudflare-block",
+      "implies": "SOFT_BLOCK",
+      "bodyMarkers": [
+        "Attention Required!",
+        "Sorry, you have been blocked",
+        "Cloudflare Ray ID",
+        "error code 1020",
+        "You are unable to access"
+      ],
+      "headerMarkers": []
+    },
+    {
+      "vendor": "datadome-challenge",
+      "implies": "CHALLENGE",
+      "bodyMarkers": [
+        "geo.captcha-delivery.com",
+        "captcha-delivery.com",
+        "dd-captcha",
+        "DataDome CAPTCHA"
+      ],
+      "headerMarkers": [{ "name": "x-datadome", "contains": "protected" }]
+    },
+    {
+      "vendor": "datadome-block",
+      "implies": "SOFT_BLOCK",
+      "bodyMarkers": [
+        "blocked by DataDome",
+        "Blocked - DataDome",
+        "you have been blocked",
+        "reference id"
+      ],
+      "headerMarkers": [{ "name": "set-cookie", "contains": "datadome" }]
+    },
+    {
+      "vendor": "perimeterx-challenge",
+      "implies": "CHALLENGE",
+      "bodyMarkers": [
+        "px-captcha",
+        "Please verify you are a human",
+        "_pxhd",
+        "captcha.px-cdn.net",
+        "PerimeterX"
+      ],
+      "headerMarkers": []
+    },
+    {
+      "vendor": "perimeterx-block",
+      "implies": "SOFT_BLOCK",
+      "bodyMarkers": [
+        "Access to this page has been denied",
+        "blocked because we believe you are using automation tools"
+      ],
+      "headerMarkers": []
+    },
+    {
+      "vendor": "akamai-block",
+      "implies": "SOFT_BLOCK",
+      "bodyMarkers": [
+        "Access Denied",
+        "You don't have permission to access",
+        "Reference #",
+        "errors.edgesuite.net",
+        "AkamaiGHost"
+      ],
+      "headerMarkers": [{ "name": "server", "contains": "AkamaiGHost" }]
+    },
+    {
+      "vendor": "imperva-incapsula",
+      "implies": "SOFT_BLOCK",
+      "bodyMarkers": [
+        "Incapsula incident ID",
+        "_Incapsula_Resource",
+        "Request unsuccessful. Incapsula incident",
+        "Powered by Imperva"
+      ],
+      "headerMarkers": [{ "name": "x-iinfo", "contains": "" }]
+    },
+    {
+      "vendor": "hcaptcha",
+      "implies": "CHALLENGE",
+      "bodyMarkers": ["hcaptcha.com/1/api.js", "h-captcha", "hcaptcha-box", "js.hcaptcha.com"],
+      "headerMarkers": []
+    },
+    {
+      "vendor": "recaptcha",
+      "implies": "CHALLENGE",
+      "bodyMarkers": [
+        "www.google.com/recaptcha",
+        "g-recaptcha",
+        "grecaptcha.execute",
+        "recaptcha/api.js"
+      ],
+      "headerMarkers": []
+    }
+  ],
+  "thresholds": {
+    "successStatus": { "min": 200, "max": 299 },
+    "minContentLength": 300,
+    "minDomNodes": 8,
+    "minTextNodes": 2,
+    "minContentRatio": 0.03,
+    "minFillRate": 0.5,
+    "maxLayoutDrift": 0.35
+  }
+}
