@@ -32,11 +32,9 @@ myrmex sits between an Unblocker and an AI Parser and answers one question about
 
 ## Origin
 
-**Myrmex** (Greek *μύρμηξ*, "ant") is the Ice-and-Fire-mod insect-colony creature whose soldiers know their hive-mates by scent and refuse any intruder that does not carry it — the same instinct as the Greek myth of Myrmex, the girl Athena turned into an ant. A colony's whole defense is a recognition test: *do you smell like one of us?* Anything that fails is turned away at the mouth of the nest, no matter how convincingly it moves.
+**Myrmex** takes its name from the ant of the **Ice and Fire** mod — the same bestiary the sibling products draw from ([cyclops](https://github.com/enchanter-ai/cyclops), Gorgon, Hydra, Lich). A colony's soldiers know their hive-mates by scent and turn away anything that lacks it at the mouth of the nest, no matter how convincingly it moves. myrmex stands at the mouth of the pipeline and does the same: it runs one recognition test on every response — *does this carry the markers of real data?* — and refuses a soft-block, challenge, decoy, or drifted layout before it reaches the AI Parser. It does not fetch, render, or decide what to scrape next; it watches *that*, and nothing more.
 
-That is the whole job here. myrmex does not fetch, does not render, does not decide what to scrape next. It stands at the mouth of the pipeline and runs one recognition test on every response: *does this carry the markers of real data?* Real content passes; a soft-block, a challenge shell, a decoy, or a drifted layout lacks the scent and is refused. It answers exactly one question — *"is this response real data, or a silent failure dressed as HTTP 200?"* — and nothing more.
-
-It is a sibling of [cyclops](https://github.com/enchanter-ai/cyclops), gorgon, hydra, and lich — the same Ice-and-Fire bestiary, each a small, deterministic guard at a different boundary.
+The question this project answers: *Is this response real data, or a silent failure dressed as HTTP 200?*
 
 ## Contents
 
@@ -100,9 +98,9 @@ flowchart LR
   P["AI Parser"]:::s
   X["SOFT_BLOCK · CHALLENGE<br/>DECOY_EMPTY · LAYOUT_DRIFT"]:::d
   Q["reject / re-fetch"]:::u
-  A -->|"{status, headers, body}"| G
-  G -->|verdict + trace| R
-  G -->|verdict + trace| X
+  A -->|"status, headers, body"| G
+  G -->|"verdict + trace"| R
+  G -->|"verdict + trace"| X
   R --> P
   X --> Q
 ```
