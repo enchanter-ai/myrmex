@@ -1,0 +1,11 @@
+{
+  "label": "REAL",
+  "note": "forum discussion thread, no schema, no baseline",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Best budget mirrorless camera in 2026?</title></head>\n<body>\n<main>\n<h1>Best budget mirrorless camera in 2026?</h1>\n<div class=\"post\"><p class=\"author\">quietlens</p><p>Looking to upgrade from my old DSLR without spending more than $800 on the body. Any recommendations from people who've made a similar jump recently?</p></div>\n<div class=\"post\"><p class=\"author\">bramble_fox</p><p>I went with the entry APS-C model from the same brand I already had lenses for. Saved a ton by not switching mounts.</p></div>\n<div class=\"post\"><p class=\"author\">quietlens</p><p>That's a good point, I hadn't thought about lens compatibility at all.</p></div>\n</main>\n</body>\n</html>"
+    }
+  }
+}

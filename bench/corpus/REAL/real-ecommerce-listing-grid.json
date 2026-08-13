@@ -1,0 +1,11 @@
+{
+  "label": "REAL",
+  "note": "ecommerce category grid page, no schema, no baseline",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Running Shoes - Category</title></head>\n<body>\n<main>\n<h1>Running Shoes</h1>\n<div class=\"grid\">\n<div class=\"card\"><h2>Pace Runner 4</h2><span>$110</span></div>\n<div class=\"card\"><h2>Trailblazer Mid</h2><span>$140</span></div>\n<div class=\"card\"><h2>Cloudline Elite</h2><span>$165</span></div>\n<div class=\"card\"><h2>Marathon Pro 2</h2><span>$150</span></div>\n</div>\n<p>Showing 4 of 62 results. Free shipping on orders over $75, with returns accepted within 60 days of purchase.</p>\n</main>\n</body>\n</html>"
+    }
+  }
+}

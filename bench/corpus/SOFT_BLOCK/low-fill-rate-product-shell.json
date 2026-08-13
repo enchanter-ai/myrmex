@@ -1,0 +1,37 @@
+{
+  "label": "SOFT_BLOCK",
+  "note": "real-looking product shell served as 200 with schema selectors resolving to nothing, silent scrape",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {
+        "content-type": "text/html"
+      },
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Trailhead 32L Backpack</title></head>\n<body>\n<main>\n<h1 class=\"product-title-x\">Trailhead 32L Backpack</h1>\n<div class=\"skeleton-price\"></div>\n<div class=\"skeleton-availability\"></div>\n<p>This product page loaded but the data widgets did not hydrate, leaving the shell visible with placeholder blocks where price and stock status normally render.</p>\n<p>Our team has been notified and is investigating the missing pricing module on this template.</p>\n<div class=\"placeholder-block\"></div>\n<div class=\"placeholder-block\"></div>\n<nav><a href=\"/\">Home</a><a href=\"/backpacks\">Backpacks</a></nav>\n</main>\n</body>\n</html>"
+    },
+    "expectedSchema": {
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "selector": ".product-title"
+        },
+        {
+          "name": "price",
+          "type": "string",
+          "selector": ".price"
+        },
+        {
+          "name": "availability",
+          "type": "string",
+          "selector": ".availability"
+        },
+        {
+          "name": "rating",
+          "type": "number",
+          "selector": ".rating"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "label": "DECOY_EMPTY",
+  "note": "long enough body but too few dom elements",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Loading</title></head>\n<body>\n<div><p>This page has plenty of characters in its body so it clears the minimum content length floor, but it is built from almost no actual markup elements at all, just this single wrapping div and paragraph carrying a long run of padding text to reach the length floor without adding any additional tags to the document whatsoever, which is unusual for a real rendered page and should never happen on a genuine listing or article.</p></div>\n</body>\n</html>"
+    }
+  }
+}

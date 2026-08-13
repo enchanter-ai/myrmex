@@ -1,0 +1,11 @@
+{
+  "label": "REAL",
+  "note": "technical documentation page, no schema, no baseline",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Configuring retry policies</title></head>\n<body>\n<main>\n<h1>Configuring retry policies</h1>\n<p>Retry policies control how the client library responds to transient failures such as connection resets or 503 responses from the upstream service.</p>\n<h2>Basic configuration</h2>\n<p>Set <code>maxRetries</code> and <code>backoffMs</code> on the client options object to enable exponential backoff between attempts.</p>\n<h2>Disabling retries</h2>\n<p>Pass <code>maxRetries: 0</code> to disable retry behavior entirely, which is useful when the caller implements its own retry loop.</p>\n</main>\n</body>\n</html>"
+    }
+  }
+}

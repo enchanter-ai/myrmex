@@ -1,0 +1,28 @@
+{
+  "label": "REAL",
+  "note": "same article-shaped tag histogram as its own baseline, TVD near zero",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {
+        "content-type": "text/html"
+      },
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Ridge Valley opens its first public library branch</title></head>\n<body>\n<header><h1>Ridge Valley opens its first public library branch</h1><p class=\"byline\">By Nina Kowalczyk</p></header>\n<article>\n<p>Ridge Valley celebrated the opening of its first public library branch on Saturday, drawing several hundred residents to a ribbon-cutting ceremony on the building's front steps.</p>\n<p>The 12,000-square-foot facility includes a children's reading room, a maker space with 3D printers, and a quiet study wing overlooking the community garden.</p>\n<p>\"We've wanted this for over a decade,\" said branch manager Foster Diallo, who previously ran the county's bookmobile program.</p>\n<p>The library will be open six days a week starting next month, with extended hours during the school year.</p>\n<a href=\"/library/hours\">See full hours</a>\n<img src=\"/img/ridge-valley-library.jpg\" alt=\"exterior of the new library\">\n</article>\n</body>\n</html>"
+    },
+    "baseline": {
+      "tagCounts": {
+        "html": 1,
+        "head": 1,
+        "meta": 1,
+        "title": 1,
+        "body": 1,
+        "header": 1,
+        "h1": 1,
+        "p": 5,
+        "article": 1,
+        "a": 1,
+        "img": 1
+      }
+    }
+  }
+}

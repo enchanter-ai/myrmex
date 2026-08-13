@@ -1,0 +1,13 @@
+{
+  "label": "SOFT_BLOCK",
+  "note": "akamai block marker served with a deceptive 200 status",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {
+        "server": "AkamaiGHost"
+      },
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Access Denied</title></head>\n<body>\n<div class=\"akamai-error\"><h1>Access Denied</h1><p>Reference #18.9a8b7c.1755000000.ffeeaa</p></div>\n</body>\n</html>"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "label": "SOFT_BLOCK",
+  "note": "imperva incapsula incident page",
+  "input": {
+    "response": {
+      "status": 403,
+      "headers": {
+        "x-iinfo": "9-1234567-0"
+      },
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Request unsuccessful</title></head>\n<body>\n<div class=\"incapsula-error\"><h1>Request unsuccessful. Incapsula incident ID: 1234567890123456789</h1></div>\n</body>\n</html>"
+    }
+  }
+}

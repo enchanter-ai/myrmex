@@ -1,0 +1,11 @@
+{
+  "label": "DECOY_EMPTY",
+  "note": "large markup-heavy body with negligible visible text, no vendor markers",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Loading</title></head>\n<body>\n<div class=\"grid grid-cols-12 gap-4 p-8 m-8 border rounded-lg shadow-xl bg-gradient-to-r from-slate-100 to-slate-200\" data-testid=\"wrapper-outer\" data-analytics-id=\"wrapper-outer-1234567890\">\n<div class=\"col-span-3 flex items-center justify-center h-64 bg-slate-50\" data-testid=\"cell-1\" data-analytics-id=\"cell-1-0987654321\"><span>a</span></div>\n<div class=\"col-span-3 flex items-center justify-center h-64 bg-slate-50\" data-testid=\"cell-2\" data-analytics-id=\"cell-2-1122334455\"><span>b</span></div>\n<div class=\"col-span-3 flex items-center justify-center h-64 bg-slate-50\" data-testid=\"cell-3\" data-analytics-id=\"cell-3-6677889900\"><span>c</span></div>\n<div class=\"col-span-3 flex items-center justify-center h-64 bg-slate-50\" data-testid=\"cell-4\" data-analytics-id=\"cell-4-5544332211\"><span>d</span></div>\n<div class=\"col-span-3 flex items-center justify-center h-64 bg-slate-50\" data-testid=\"cell-5\" data-analytics-id=\"cell-5-9988776655\"><span>e</span></div>\n</div>\n</body>\n</html>"
+    }
+  }
+}

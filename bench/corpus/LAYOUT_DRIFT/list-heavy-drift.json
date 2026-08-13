@@ -1,0 +1,23 @@
+{
+  "label": "LAYOUT_DRIFT",
+  "note": "article-shaped baseline vs a deeply nested list restructure, high TVD",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Three weeks with a mechanical keyboard</title></head>\n<body>\n<ul>\n<li>I switched to a mechanical keyboard three weeks ago after a decade of laptop keyboards.</li>\n<li>The first thing I noticed was the sound, and my partner noticed it too, immediately.</li>\n<li>By the second week the typos had dropped off noticeably.</li>\n<li>I don't know if I'd recommend the switch to everyone.</li>\n<li><li class=\"c0\"></li><li class=\"c1\"></li><li class=\"c2\"></li><li class=\"c3\"></li><li class=\"c4\"></li><li class=\"c5\"></li><li class=\"c6\"></li><li class=\"c7\"></li><li class=\"c8\"></li><li class=\"c9\"></li><li class=\"c10\"></li><li class=\"c11\"></li><li class=\"c12\"></li><li class=\"c13\"></li><li class=\"c14\"></li><li class=\"c15\"></li><li class=\"c16\"></li><li class=\"c17\"></li></li>\n</ul>\n</body>\n</html>"
+    },
+    "baseline": {
+      "tagCounts": {
+        "html": 1,
+        "head": 1,
+        "meta": 1,
+        "title": 1,
+        "body": 1,
+        "main": 1,
+        "h1": 1,
+        "p": 4
+      }
+    }
+  }
+}

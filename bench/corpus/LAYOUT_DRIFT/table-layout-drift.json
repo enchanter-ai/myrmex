@@ -1,0 +1,26 @@
+{
+  "label": "LAYOUT_DRIFT",
+  "note": "article-shaped baseline vs a table-grid restructure of the same page, high TVD",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Regional wheat harvest expected to top last year's yield</title></head>\n<body>\n<table><tbody>\n<tr><td><h1>Regional wheat harvest expected to top last year's yield</h1></td></tr>\n<tr><td>Favorable spring rains and a mild summer have pushed forecasters to raise their outlook for this year's wheat harvest across the tri-county farming region.</td></tr>\n<tr><td>The state agriculture office now projects yields roughly nine percent above last year's totals.</td></tr>\n<tr><td>Grain elevator operators say they are preparing for a busier-than-usual harvest season.</td></tr>\n<tr><td>Local farmer Dana Whitfield said the early numbers are encouraging.</td></tr>\n</tbody></table>\n</body>\n</html>"
+    },
+    "baseline": {
+      "tagCounts": {
+        "html": 1,
+        "head": 1,
+        "meta": 1,
+        "title": 1,
+        "body": 1,
+        "header": 1,
+        "h1": 1,
+        "p": 5,
+        "article": 1,
+        "a": 1,
+        "img": 1
+      }
+    }
+  }
+}

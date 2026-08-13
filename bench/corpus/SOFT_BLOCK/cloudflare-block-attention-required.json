@@ -1,0 +1,13 @@
+{
+  "label": "SOFT_BLOCK",
+  "note": "cloudflare attention-required block page with ray id",
+  "input": {
+    "response": {
+      "status": 403,
+      "headers": {
+        "server": "cloudflare"
+      },
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Attention Required! | Cloudflare</title></head>\n<body>\n<div class=\"cf-wrapper\"><h1>Attention Required!</h1><p>Cloudflare Ray ID: 7c1a9f3e2b1d4a11</p></div>\n</body>\n</html>"
+    }
+  }
+}

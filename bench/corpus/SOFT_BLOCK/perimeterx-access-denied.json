@@ -1,0 +1,11 @@
+{
+  "label": "SOFT_BLOCK",
+  "note": "perimeterx automation block page",
+  "input": {
+    "response": {
+      "status": 403,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Access Denied</title></head>\n<body>\n<div class=\"px-block\"><h1>Access to this page has been denied</h1><p>We have detected that you are using automation tools to browse the website.</p></div>\n</body>\n</html>"
+    }
+  }
+}

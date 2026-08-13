@@ -1,0 +1,11 @@
+{
+  "label": "DECOY_EMPTY",
+  "note": "tiny body under the minContentLength floor",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {},
+      "body": "<html><body><p>Loading</p></body></html>"
+    }
+  }
+}

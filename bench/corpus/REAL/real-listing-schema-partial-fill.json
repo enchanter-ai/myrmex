@@ -1,0 +1,42 @@
+{
+  "label": "REAL",
+  "note": "listing page, schema partially filled but still above the fill-rate floor",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {
+        "content-type": "text/html"
+      },
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>2BR Apartment - Riverside</title></head>\n<body>\n<main>\n<h1 class=\"listing-title\">2BR Apartment - Riverside</h1>\n<span class=\"rent\">$1,850/mo</span>\n<div class=\"sqft\">920 sqft</div>\n<p class=\"description\">Bright two-bedroom unit on the third floor with a west-facing balcony, in-unit laundry, and a renovated kitchen. Walking distance to the riverside greenway and the Elm Street farmers market.</p>\n<ul class=\"amenities\"><li>In-unit laundry</li><li>Balcony</li><li>Pet friendly</li></ul>\n<footer><p>Listed 2 days ago by Ridgeline Property Management.</p></footer>\n</main>\n</body>\n</html>"
+    },
+    "expectedSchema": {
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "selector": ".listing-title"
+        },
+        {
+          "name": "rent",
+          "type": "string",
+          "selector": ".rent"
+        },
+        {
+          "name": "sqft",
+          "type": "string",
+          "selector": ".sqft"
+        },
+        {
+          "name": "deposit",
+          "type": "string",
+          "selector": ".deposit"
+        },
+        {
+          "name": "leaseTerm",
+          "type": "string",
+          "selector": ".lease-term"
+        }
+      ]
+    }
+  }
+}

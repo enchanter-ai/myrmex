@@ -1,0 +1,13 @@
+{
+  "label": "CHALLENGE",
+  "note": "cloudflare challenge with cf-mitigated header and body markers",
+  "input": {
+    "response": {
+      "status": 403,
+      "headers": {
+        "cf-mitigated": "challenge"
+      },
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Just a moment...</title></head>\n<body>\n<div id=\"cf-wrapper\"><h1>Just a moment...</h1><p>Enable JavaScript and cookies to continue</p></div>\n</body>\n</html>"
+    }
+  }
+}

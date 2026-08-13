@@ -1,0 +1,42 @@
+{
+  "label": "SOFT_BLOCK",
+  "note": "real-looking listing shell served as 200 with mostly-empty schema fields, silent scrape",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {
+        "content-type": "text/html"
+      },
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>2BR Apartment - Riverside</title></head>\n<body>\n<main>\n<h1 class=\"listing-title-x\">2BR Apartment - Riverside</h1>\n<div class=\"rent-empty\"></div>\n<div class=\"sqft-empty\"></div>\n<p>Listing details are still loading for this unit. Please check back shortly for full pricing and availability information.</p>\n<p>If this message persists, try refreshing the page or contact support for assistance.</p>\n<div class=\"loading-spinner\"></div>\n<nav><a href=\"/\">Home</a><a href=\"/listings\">Listings</a></nav>\n</main>\n</body>\n</html>"
+    },
+    "expectedSchema": {
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "selector": ".listing-title"
+        },
+        {
+          "name": "rent",
+          "type": "string",
+          "selector": ".rent"
+        },
+        {
+          "name": "sqft",
+          "type": "string",
+          "selector": ".sqft"
+        },
+        {
+          "name": "deposit",
+          "type": "string",
+          "selector": ".deposit"
+        },
+        {
+          "name": "leaseTerm",
+          "type": "string",
+          "selector": ".lease-term"
+        }
+      ]
+    }
+  }
+}

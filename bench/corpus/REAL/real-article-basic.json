@@ -1,0 +1,13 @@
+{
+  "label": "REAL",
+  "note": "plain news article, no schema, no baseline",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {
+        "content-type": "text/html"
+      },
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Harbor city council approves new transit line</title></head>\n<body>\n<header><h1>Harbor city council approves new transit line</h1><p class=\"byline\">By Jordan Meece, Staff Writer</p></header>\n<article>\n<p>The Harbor city council voted 6-1 on Tuesday to approve funding for a new light-rail line connecting the downtown core to the eastern warehouse district, ending nearly two years of public hearings and budget negotiations.</p>\n<p>The $340 million project, backed largely by a mix of state transit grants and a dedicated sales-tax measure passed by voters last year, is expected to break ground in the spring and carry its first passengers by late 2029.</p>\n<p>Supporters said the line would relieve pressure on the aging Route 12 bus corridor, which currently carries more than eighteen thousand riders on an average weekday and has seen ridership climb steadily since the pandemic-era dip.</p>\n<p>\"This is the single biggest investment this city has made in public transit in a generation,\" said council member Priya Anand, who sponsored the measure. \"It's going to change how people get to work.\"</p>\n<p>Opponents, including the lone dissenting vote from council member Hal Ferris, argued the project's cost estimates were too optimistic and pointed to overruns on similar lines in neighboring cities.</p>\n<footer><p>Published 08:12am. Updated 09:45am.</p></footer>\n</article>\n</body>\n</html>"
+    }
+  }
+}

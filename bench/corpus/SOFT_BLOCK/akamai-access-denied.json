@@ -1,0 +1,13 @@
+{
+  "label": "SOFT_BLOCK",
+  "note": "akamai edge block page",
+  "input": {
+    "response": {
+      "status": 403,
+      "headers": {
+        "server": "AkamaiGHost"
+      },
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Access Denied</title></head>\n<body>\n<div class=\"akamai-error\"><h1>Access Denied</h1><p>You don't have permission to access this resource.</p><p>Reference #18.3f2e1a.1755000000.abcdef</p></div>\n</body>\n</html>"
+    }
+  }
+}

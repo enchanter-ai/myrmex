@@ -1,0 +1,13 @@
+{
+  "label": "SOFT_BLOCK",
+  "note": "datadome block page",
+  "input": {
+    "response": {
+      "status": 403,
+      "headers": {
+        "set-cookie": "datadome=abc123; Path=/"
+      },
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Blocked</title></head>\n<body>\n<div class=\"dd-block\"><h1>Blocked - DataDome</h1><p>Your request has been blocked for security reasons.</p></div>\n</body>\n</html>"
+    }
+  }
+}

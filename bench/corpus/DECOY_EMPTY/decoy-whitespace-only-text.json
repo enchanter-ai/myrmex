@@ -1,0 +1,11 @@
+{
+  "label": "DECOY_EMPTY",
+  "note": "text nodes present but whitespace-only, so they do not count",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>x</title></head>\n<body>\n<div class=\"a\">   </div><div class=\"b\">\n    </div><div class=\"c\">\t</div><div class=\"d\">   </div><div class=\"e\"></div>\n<div class=\"f\"></div><div class=\"g\"></div><div class=\"h\"></div><div class=\"i\"></div><div class=\"j\"></div>\n<div class=\"k\"></div><div class=\"l\"></div>\n</body>\n</html>"
+    }
+  }
+}

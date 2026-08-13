@@ -1,0 +1,37 @@
+{
+  "label": "REAL",
+  "note": "product page, expectedSchema fully filled, proves fill-rate does not false-positive",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {
+        "content-type": "text/html"
+      },
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Trailhead 32L Backpack</title></head>\n<body>\n<main>\n<h1 class=\"product-title\">Trailhead 32L Backpack</h1>\n<span class=\"price\">$129.00</span>\n<div class=\"availability\">In stock</div>\n<div class=\"rating\" content=\"4.6\">4.6 out of 5 stars</div>\n<p class=\"description\">A rugged 32-liter daypack built for multi-day trail use, with a padded hip belt, hydration sleeve, and reinforced base panel for carrying camp gear over rough terrain.</p>\n<ul class=\"specs\"><li>Weight: 1.4kg</li><li>Capacity: 32L</li><li>Material: 420D ripstop nylon</li></ul>\n</main>\n</body>\n</html>"
+    },
+    "expectedSchema": {
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "selector": ".product-title"
+        },
+        {
+          "name": "price",
+          "type": "string",
+          "selector": ".price"
+        },
+        {
+          "name": "availability",
+          "type": "string",
+          "selector": ".availability"
+        },
+        {
+          "name": "rating",
+          "type": "number",
+          "selector": ".rating"
+        }
+      ]
+    }
+  }
+}

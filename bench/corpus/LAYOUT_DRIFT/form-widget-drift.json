@@ -1,0 +1,25 @@
+{
+  "label": "LAYOUT_DRIFT",
+  "note": "article-shaped baseline vs a form-and-input heavy restructure, high TVD",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Configuring retry policies</title></head>\n<body>\n<form>\n<label>Setting<input type=\"text\" value=\"maxRetries\"></label>\n<label>Value<input type=\"text\" value=\"5\"></label>\n<label>Backoff<input type=\"text\" value=\"200ms\"></label>\n<input class=\"c0\"></input><input class=\"c1\"></input><input class=\"c2\"></input><input class=\"c3\"></input><input class=\"c4\"></input><input class=\"c5\"></input><input class=\"c6\"></input><input class=\"c7\"></input><input class=\"c8\"></input><input class=\"c9\"></input><input class=\"c10\"></input><input class=\"c11\"></input><input class=\"c12\"></input><input class=\"c13\"></input><input class=\"c14\"></input><input class=\"c15\"></input>\n<p>Retry policies control how the client library responds to transient failures.</p>\n</form>\n</body>\n</html>"
+    },
+    "baseline": {
+      "tagCounts": {
+        "html": 1,
+        "head": 1,
+        "meta": 1,
+        "title": 1,
+        "body": 1,
+        "main": 1,
+        "h1": 1,
+        "h2": 2,
+        "p": 3,
+        "code": 2
+      }
+    }
+  }
+}

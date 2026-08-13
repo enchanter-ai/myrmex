@@ -1,0 +1,11 @@
+{
+  "label": "REAL",
+  "note": "personal blog post, no schema, no baseline",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Three weeks with a mechanical keyboard</title></head>\n<body>\n<header><h1>Three weeks with a mechanical keyboard</h1><p class=\"byline\">Posted by Ravi</p></header>\n<main>\n<p>I switched to a mechanical keyboard three weeks ago after a decade of laptop keyboards, and I have opinions now, apparently.</p>\n<p>The first thing I noticed was the sound. My partner noticed it too, immediately, and not in a good way.</p>\n<p>By the second week the typos had dropped off noticeably. I think the extra key travel gives my fingers more time to correct course mid-press.</p>\n<p>I don't know if I'd recommend the switch to everyone, but for anyone who writes for a living, it might be worth the two weeks of adjustment.</p>\n</main>\n<footer><p>Filed under keyboards, gear.</p></footer>\n</body>\n</html>"
+    }
+  }
+}

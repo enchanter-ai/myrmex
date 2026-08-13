@@ -1,0 +1,11 @@
+{
+  "label": "DECOY_EMPTY",
+  "note": "deeply nested empty divs padding the byte count with almost no text",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>x</title></head>\n<body>\n<div><div><div><div><div><div><div><div><div><div>\n<div><div><div><div><div><div><div><div><div><div>\n</div></div></div></div></div></div></div></div></div></div>\n</div></div></div></div></div></div></div></div></div></div>\n</body>\n</html>"
+    }
+  }
+}

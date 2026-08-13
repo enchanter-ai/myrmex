@@ -1,0 +1,11 @@
+{
+  "label": "REAL",
+  "note": "recipe page, no schema, no baseline",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Weeknight lentil soup</title></head>\n<body>\n<main>\n<h1>Weeknight lentil soup</h1>\n<p>A quick, one-pot lentil soup that comes together in under forty minutes, built around pantry staples most people already have on hand.</p>\n<h2>Ingredients</h2>\n<ul><li>1 cup red lentils</li><li>1 onion, diced</li><li>2 carrots, diced</li><li>4 cups vegetable broth</li><li>1 tsp cumin</li></ul>\n<h2>Instructions</h2>\n<p>Saute the onion and carrots until softened, add the cumin and toast briefly, then stir in the lentils and broth and simmer for twenty five minutes.</p>\n</main>\n</body>\n</html>"
+    }
+  }
+}

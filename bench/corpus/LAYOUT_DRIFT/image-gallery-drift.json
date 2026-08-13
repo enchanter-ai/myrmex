@@ -1,0 +1,25 @@
+{
+  "label": "LAYOUT_DRIFT",
+  "note": "article-shaped baseline vs an image-gallery restructure, high TVD",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Trailhead 32L Backpack</title></head>\n<body>\n<h1>Trailhead 32L Backpack</h1>\n<div class=\"gallery\">\n<img class=\"c0\"></img><img class=\"c1\"></img><img class=\"c2\"></img><img class=\"c3\"></img><img class=\"c4\"></img><img class=\"c5\"></img><img class=\"c6\"></img><img class=\"c7\"></img><img class=\"c8\"></img><img class=\"c9\"></img><img class=\"c10\"></img><img class=\"c11\"></img><img class=\"c12\"></img><img class=\"c13\"></img><img class=\"c14\"></img><img class=\"c15\"></img><img class=\"c16\"></img><img class=\"c17\"></img><img class=\"c18\"></img><img class=\"c19\"></img><img class=\"c20\"></img><img class=\"c21\"></img>\n<p>A rugged 32-liter daypack built for multi-day trail use, with a padded hip belt and hydration sleeve.</p>\n<p>Shown here in five colorways across twenty two studio angles.</p>\n<p>Ships within 2 business days from our warehouse.</p>\n</div>\n</body>\n</html>"
+    },
+    "baseline": {
+      "tagCounts": {
+        "html": 1,
+        "head": 1,
+        "meta": 1,
+        "title": 1,
+        "body": 1,
+        "main": 1,
+        "h1": 1,
+        "span": 1,
+        "div": 1,
+        "p": 1
+      }
+    }
+  }
+}

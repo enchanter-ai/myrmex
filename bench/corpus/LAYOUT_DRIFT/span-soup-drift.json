@@ -1,0 +1,26 @@
+{
+  "label": "LAYOUT_DRIFT",
+  "note": "article-shaped baseline vs a heavily span-wrapped restructure, high TVD",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Ridge Valley opens its first public library branch</title></head>\n<body>\n<div><span>Ridge Valley opens its first public library branch</span></div>\n<div><span>Ridge Valley celebrated the opening of its first public library branch on Saturday, drawing several hundred residents to a ribbon-cutting ceremony.</span></div>\n<div><span>The 12,000-square-foot facility includes a children's reading room and a maker space.</span></div>\n<div><span><span class=\"c0\"></span><span class=\"c1\"></span><span class=\"c2\"></span><span class=\"c3\"></span><span class=\"c4\"></span><span class=\"c5\"></span><span class=\"c6\"></span><span class=\"c7\"></span><span class=\"c8\"></span><span class=\"c9\"></span><span class=\"c10\"></span><span class=\"c11\"></span><span class=\"c12\"></span><span class=\"c13\"></span><span class=\"c14\"></span><span class=\"c15\"></span><span class=\"c16\"></span><span class=\"c17\"></span><span class=\"c18\"></span><span class=\"c19\"></span>The library will be open six days a week starting next month.</span></div>\n</body>\n</html>"
+    },
+    "baseline": {
+      "tagCounts": {
+        "html": 1,
+        "head": 1,
+        "meta": 1,
+        "title": 1,
+        "body": 1,
+        "header": 1,
+        "h1": 1,
+        "p": 5,
+        "article": 1,
+        "a": 1,
+        "img": 1
+      }
+    }
+  }
+}

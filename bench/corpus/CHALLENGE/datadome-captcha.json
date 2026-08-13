@@ -1,0 +1,13 @@
+{
+  "label": "CHALLENGE",
+  "note": "datadome captcha-delivery challenge page",
+  "input": {
+    "response": {
+      "status": 403,
+      "headers": {
+        "x-datadome": "protected"
+      },
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>DataDome CAPTCHA</title></head>\n<body>\n<div class=\"dd-challenge\"><h1>DataDome CAPTCHA</h1><script src=\"https://geo.captcha-delivery.com/captcha/?initialCid=abc\"></script></div>\n</body>\n</html>"
+    }
+  }
+}

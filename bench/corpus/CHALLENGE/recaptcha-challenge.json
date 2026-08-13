@@ -1,0 +1,11 @@
+{
+  "label": "CHALLENGE",
+  "note": "google recaptcha challenge page",
+  "input": {
+    "response": {
+      "status": 403,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Verify you are human</title></head>\n<body>\n<div class=\"challenge\"><h1>Verify you are human</h1><script src=\"https://www.google.com/recaptcha/api.js\"></script><div class=\"g-recaptcha\" data-sitekey=\"abc\"></div></div>\n</body>\n</html>"
+    }
+  }
+}

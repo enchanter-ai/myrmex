@@ -1,0 +1,48 @@
+{
+  "label": "REAL",
+  "note": "well-filled schema plus a close baseline, both non-features pass so verdict is REAL",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {
+        "content-type": "text/html"
+      },
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Summit 2L Water Bottle</title></head>\n<body>\n<main>\n<h1 class=\"product-title\">Summit 2L Water Bottle</h1>\n<span class=\"price\">$34.00</span>\n<div class=\"availability\">In stock</div>\n<p class=\"description\">An insulated stainless-steel bottle that keeps cold drinks cold for 24 hours, with a wide mouth for ice cubes and a leakproof cap.</p>\n<ul class=\"specs\"><li>Capacity: 2L</li><li>Material: 18/8 stainless steel</li><li>Weight: 480g</li></ul>\n<p class=\"shipping\">Ships within 2 business days, free returns within 30 days of delivery.</p>\n</main>\n</body>\n</html>"
+    },
+    "expectedSchema": {
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "selector": ".product-title"
+        },
+        {
+          "name": "price",
+          "type": "string",
+          "selector": ".price"
+        },
+        {
+          "name": "availability",
+          "type": "string",
+          "selector": ".availability"
+        }
+      ]
+    },
+    "baseline": {
+      "tagCounts": {
+        "html": 1,
+        "head": 1,
+        "meta": 1,
+        "title": 1,
+        "body": 1,
+        "main": 1,
+        "h1": 1,
+        "span": 1,
+        "div": 1,
+        "p": 2,
+        "ul": 1,
+        "li": 3
+      }
+    }
+  }
+}

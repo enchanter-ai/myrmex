@@ -1,0 +1,11 @@
+{
+  "label": "REAL",
+  "note": "job listing page, no schema, no baseline",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Backend Engineer - Payments Team</title></head>\n<body>\n<main>\n<h1>Backend Engineer - Payments Team</h1>\n<p class=\"meta\">Full-time · Remote · Posted 3 days ago</p>\n<p>We're looking for a backend engineer to join our payments team, working on the ledger service that reconciles transactions across four different payment processors.</p>\n<h2>What you'll do</h2>\n<ul><li>Design and maintain idempotent payment reconciliation jobs</li><li>Partner with support on transaction disputes</li><li>Improve test coverage on the settlement pipeline</li></ul>\n<h2>About the team</h2>\n<p>The payments team owns everything between checkout and settlement, including reconciliation, chargebacks, and processor failover.</p>\n</main>\n</body>\n</html>"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "label": "CHALLENGE",
+  "note": "cloudflare browser check challenge page",
+  "input": {
+    "response": {
+      "status": 503,
+      "headers": {
+        "server": "cloudflare"
+      },
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>One more step</title></head>\n<body>\n<div id=\"cf-wrapper\"><h1>Checking your browser before accessing example.com</h1><p>This process is automatic.</p></div>\n</body>\n</html>"
+    }
+  }
+}

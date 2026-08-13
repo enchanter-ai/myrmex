@@ -1,0 +1,11 @@
+{
+  "label": "CHALLENGE",
+  "note": "perimeterx human verification challenge page",
+  "input": {
+    "response": {
+      "status": 403,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Please Verify</title></head>\n<body>\n<div class=\"px-captcha-container\"><h1>Please verify you are a human</h1><script src=\"https://captcha.px-cdn.net/px-captcha.js\"></script></div>\n</body>\n</html>"
+    }
+  }
+}

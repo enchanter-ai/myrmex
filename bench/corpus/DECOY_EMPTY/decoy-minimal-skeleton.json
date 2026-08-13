@@ -1,0 +1,11 @@
+{
+  "label": "DECOY_EMPTY",
+  "note": "bare html skeleton with no real content",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {},
+      "body": "<html><head><title>x</title></head><body></body></html>"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "label": "SOFT_BLOCK",
+  "note": "cloudflare block marker served with a deceptive 200 status",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {
+        "server": "cloudflare"
+      },
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Sorry, you have been blocked</title></head>\n<body>\n<div class=\"cf-error\"><h1>Sorry, you have been blocked</h1><p>You are unable to access this website.</p></div>\n</body>\n</html>"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "label": "REAL",
+  "note": "longform news article, no schema, no baseline",
+  "input": {
+    "response": {
+      "status": 200,
+      "headers": {},
+      "body": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Regional wheat harvest expected to top last year's yield</title></head>\n<body>\n<header><h1>Regional wheat harvest expected to top last year's yield</h1><p class=\"byline\">By Casey Dumont</p></header>\n<article>\n<p>Favorable spring rains and a mild summer have pushed forecasters to raise their outlook for this year's wheat harvest across the tri-county farming region.</p>\n<p>The state agriculture office now projects yields roughly nine percent above last year's totals, a welcome reversal after two consecutive years of drought-driven shortfalls.</p>\n<p>Grain elevator operators say they are preparing for a busier-than-usual harvest season, with several facilities adding overnight shifts to handle the expected volume.</p>\n<p>Local farmer Dana Whitfield said the early numbers are encouraging but cautioned that hail storms in the final weeks before harvest could still change the picture.</p>\n</article>\n<footer><p>Published 06:30am.</p></footer>\n</body>\n</html>"
+    }
+  }
+}
