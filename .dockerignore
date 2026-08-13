@@ -1,0 +1,16 @@
+node_modules
+dist
+.git
+.github
+bench
+test
+docs
+*.local
+.env
+*.md
+!README.md
+.gitignore
+.dockerignore
+Dockerfile
+biome.json
+vitest.config.ts
