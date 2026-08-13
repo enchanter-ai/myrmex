@@ -86,24 +86,19 @@ myrmex's contribution is narrow and named honestly: a **deterministic, explainab
 
 ## How It Works
 
-```mermaid
-flowchart LR
-  classDef u fill:#3a2f14,stroke:#d6a441,color:#fbeecb
-  classDef s fill:#123626,stroke:#57c98a,color:#d6f5e5
-  classDef d fill:#3a1a18,stroke:#ff6b5e,color:#ffd9d4
-  classDef p fill:#131d2b,stroke:#4aa3c7,color:#dff1f8
-  A(["Unblocker<br/>fetches the page"]):::p
-  G{{"myrmex scrape-trust gate<br/>6 features · signatures.json"}}:::p
-  R["REAL"]:::s
-  P["AI Parser"]:::s
-  X["SOFT_BLOCK · CHALLENGE<br/>DECOY_EMPTY · LAYOUT_DRIFT"]:::d
-  Q["reject / re-fetch"]:::u
-  A -->|"status, headers, body"| G
-  G -->|"verdict + trace"| R
-  G -->|"verdict + trace"| X
-  R --> P
-  X --> Q
-```
+<p align="center">
+  <a href="docs/assets/architecture.mmd" title="View architecture source (Mermaid)">
+    <img src="docs/assets/architecture.svg"
+         alt="myrmex scrape-trust gate blueprint — title block, fetched response, three surface doors (library, HTTP, MCP), the deterministic scoreResponse core (DOM parse then six extractors then verdictFrom), the five verdict classes, and a verdict-class legend"
+         width="100%" style="max-width: 1100px;">
+  </a>
+</p>
+
+<sub align="center">
+
+Source: [docs/assets/architecture.mmd](docs/assets/architecture.mmd) · Regeneration command in [docs/assets/README.md](docs/assets/README.md).
+
+</sub>
 
 Every response is scored once, against every feature, every time — the trace always lists all six, fired or not. The verdict is the first class whose precedence condition is met; the trace is what makes the "why" auditable instead of a black box.
 

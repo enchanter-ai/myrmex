@@ -1,0 +1,71 @@
+---
+title: myrmex scrape-trust gate
+config:
+  look: neo
+  theme: dark
+  flowchart:
+    curve: basis
+    padding: 18
+    nodeSpacing: 44
+    rankSpacing: 54
+    htmlLabels: true
+    subGraphTitleMargin:
+      top: 14
+      bottom: 18
+---
+flowchart TB
+    TitleBlock["<div style='font-family:ui-monospace,SFMono-Regular,Consolas,monospace;text-align:center;min-width:960px;padding:6px 10px;line-height:1.8'><div style='color:#58a6ff;font-size:15px;letter-spacing:6px;border-bottom:1px solid #1e3a5f;padding-bottom:10px;margin-bottom:10px'>MYRMEX &nbsp;·&nbsp; SCRAPE-TRUST&nbsp;GATE &nbsp;·&nbsp; ARCHITECTURE</div><div style='display:flex;gap:36px;justify-content:center;font-size:11px;color:#8b949e;letter-spacing:2px'><span>DWG&nbsp;&nbsp;<b style='color:#e6edf3'>MYX-001</b></span><span>REV&nbsp;&nbsp;<b style='color:#e6edf3'>A.1</b></span><span>SCALE&nbsp;&nbsp;<b style='color:#e6edf3'>1:1</b></span><span>MODE&nbsp;&nbsp;<b style='color:#e6edf3'>deterministic&nbsp;·&nbsp;model-free</b></span><span>SHEET&nbsp;&nbsp;<b style='color:#e6edf3'>01&nbsp;/&nbsp;01</b></span></div></div>"]
+
+    Resp(["<div style='text-align:center;line-height:1.8;padding:4px 12px'><b style='letter-spacing:1.5px'>INPUT&nbsp;·&nbsp;FETCHED&nbsp;RESPONSE</b><br/><em style='color:#8b949e;font-size:13px;font-weight:400'>status · headers · body&nbsp;&nbsp;(+ optional expectedSchema · baseline)</em></div>"])
+
+    subgraph Doors["<div style='text-align:center;min-width:960px;line-height:2'><div><span style='font-family:ui-monospace,monospace;color:#8b949e;font-size:11px;letter-spacing:3px'>SURFACE</span>&nbsp;&nbsp;·&nbsp;&nbsp;<b style='letter-spacing:2px'>THREE&nbsp;DOORS</b>&nbsp;&nbsp;·&nbsp;&nbsp;<span style='color:#58a6ff;letter-spacing:1px'>one scoreResponse</span></div><div style='color:#6e7681;font-size:11px;font-family:ui-monospace,monospace;letter-spacing:1.2px'>ROLE&nbsp;·&nbsp;thin&nbsp;adapters&nbsp;·&nbsp;validate&nbsp;input&nbsp;(zod),&nbsp;then&nbsp;call&nbsp;the&nbsp;core</div></div>"]
+        direction LR
+        lib["<div style='text-align:center;line-height:1.7;padding:2px 4px'>LIBRARY<br/><small style='color:#6e7681;letter-spacing:1px'>import scoreResponse()<br/>Stream/Kafka pipeline</small></div>"]
+        http["<div style='text-align:center;line-height:1.7;padding:2px 4px'>HTTP<br/><small style='color:#6e7681;letter-spacing:1px'>POST /score · GET /health<br/>any language · curl</small></div>"]
+        mcp["<div style='text-align:center;line-height:1.7;padding:2px 4px'>MCP<br/><small style='color:#6e7681;letter-spacing:1px'>scrape-trust tool<br/>an AI agent asks mid-flow</small></div>"]
+    end
+
+    subgraph Core["<div style='text-align:center;min-width:960px;line-height:2'><div><span style='font-family:ui-monospace,monospace;color:#8b949e;font-size:11px;letter-spacing:3px'>CORE</span>&nbsp;&nbsp;·&nbsp;&nbsp;<b style='letter-spacing:2px'>scoreResponse</b>&nbsp;&nbsp;·&nbsp;&nbsp;<span style='color:#d6a441;letter-spacing:1px'>deterministic · model-free</span></div><div style='color:#6e7681;font-size:11px;font-family:ui-monospace,monospace;letter-spacing:1.2px'>ROLE&nbsp;·&nbsp;parse&nbsp;once&nbsp;·&nbsp;run&nbsp;six&nbsp;extractors&nbsp;·&nbsp;resolve&nbsp;by&nbsp;fixed&nbsp;precedence&nbsp;·&nbsp;all&nbsp;rules&nbsp;in&nbsp;signatures.json</div></div>"]
+        direction LR
+        parse["<div style='text-align:center;line-height:1.7;padding:2px 4px'>DOM<br/>PARSE<br/><small style='color:#6e7681;letter-spacing:1px'>nodes · textNodes · text</small></div>"] --> f1["<div style='text-align:center;line-height:1.7;padding:2px 4px'>vendor_challenge<br/>_signature<br/><small style='color:#6e7681;letter-spacing:1px'>markers</small></div>"] --> f2["<div style='text-align:center;line-height:1.7;padding:2px 4px'>block_body<br/>_with_200<br/><small style='color:#6e7681;letter-spacing:1px'>2xx × marker</small></div>"] --> f3["<div style='text-align:center;line-height:1.7;padding:2px 4px'>decoy_empty<br/>_body<br/><small style='color:#6e7681;letter-spacing:1px'>&lt;300 · &lt;8 · &lt;2</small></div>"] --> f4["<div style='text-align:center;line-height:1.7;padding:2px 4px'>low_content<br/>_ratio<br/><small style='color:#6e7681;letter-spacing:1px'>&lt; 0.03</small></div>"] --> f5["<div style='text-align:center;line-height:1.7;padding:2px 4px'>low_fill<br/>_rate<br/><small style='color:#6e7681;letter-spacing:1px'>&lt; 0.5</small></div>"] --> f6["<div style='text-align:center;line-height:1.7;padding:2px 4px'>layout<br/>_drift<br/><small style='color:#6e7681;letter-spacing:1px'>TVD &gt; 0.35</small></div>"] --> eng["<div style='text-align:center;line-height:1.7;padding:2px 4px'><b>verdictFrom</b><br/><small style='color:#6e7681;letter-spacing:1px'>first match wins</small></div>"]
+    end
+
+    subgraph Verdicts["<div style='text-align:center;min-width:960px;line-height:2'><div><span style='font-family:ui-monospace,monospace;color:#8b949e;font-size:11px;letter-spacing:3px'>OUTPUT</span>&nbsp;&nbsp;·&nbsp;&nbsp;<b style='letter-spacing:2px'>VERDICT</b>&nbsp;&nbsp;·&nbsp;&nbsp;<span style='color:#3fb950;letter-spacing:1px'>one of five + feature trace</span></div><div style='color:#6e7681;font-size:11px;font-family:ui-monospace,monospace;letter-spacing:1.2px'>ROLE&nbsp;·&nbsp;only&nbsp;REAL&nbsp;is&nbsp;ingested&nbsp;·&nbsp;the&nbsp;trace&nbsp;carries&nbsp;every&nbsp;fired&nbsp;feature,&nbsp;value&nbsp;and&nbsp;threshold</div></div>"]
+        direction LR
+        vchal["CHALLENGE"] --- vsoft["SOFT_BLOCK"] --- vdecoy["DECOY_EMPTY"] --- vdrift["LAYOUT_DRIFT"] --- vreal(["REAL&nbsp;→&nbsp;AI&nbsp;Parser"])
+    end
+
+    subgraph Legend["<div style='font-family:ui-monospace,monospace;color:#8b949e;font-size:11px;letter-spacing:3px;min-width:960px;text-align:center'>LEGEND&nbsp;&nbsp;·&nbsp;&nbsp;VERDICT&nbsp;CLASSES&nbsp;&nbsp;·&nbsp;&nbsp;RULE&nbsp;SOURCE</div>"]
+        direction LR
+        lg1["<span style='color:#3fb950'>■</span>&nbsp;&nbsp;REAL&nbsp;&nbsp;·&nbsp;&nbsp;ingest"] --- lg2["<span style='color:#f85149'>■</span>&nbsp;&nbsp;SOFT_BLOCK · CHALLENGE · DECOY_EMPTY&nbsp;&nbsp;·&nbsp;&nbsp;reject"] --- lg3["<span style='color:#d8853b'>■</span>&nbsp;&nbsp;LAYOUT_DRIFT&nbsp;&nbsp;·&nbsp;&nbsp;drift"] --- lg4["<span style='color:#d6a441'>▣</span>&nbsp;&nbsp;signatures.json&nbsp;&nbsp;·&nbsp;&nbsp;10 vendors · 7 thresholds"]
+    end
+
+    TitleBlock ~~~ Resp
+    Resp -->|"INGRESS · status · headers · body"| Doors
+    Doors -->|"VALIDATED · zod score-input"| Core
+    Core -->|"RESOLVE · verdict + trace"| Verdicts
+    Verdicts ~~~ Legend
+
+    classDef step fill:#0a1628,stroke:#1e3a5f,stroke-width:1px,color:#c9d1d9,rx:6,ry:6
+    classDef io fill:#0a1628,stroke:#1e3a5f,stroke-width:1.5px,color:#e6edf3,rx:10,ry:10
+    classDef titleBlock fill:#06111f,stroke:#1e3a5f,stroke-width:1px,color:#e6edf3,rx:4,ry:4
+    classDef legend fill:#06111f,stroke:#1e3a5f,stroke-width:1px,color:#8b949e,rx:4,ry:4
+    classDef legendItem fill:#0a1628,stroke:#1e3a5f,stroke-width:0.5px,color:#c9d1d9,rx:4,ry:4
+    classDef realStyle fill:#0f1d33,stroke:#3fb950,stroke-width:2px,color:#3fb950,rx:8,ry:8
+    classDef failStyle fill:#0f1d33,stroke:#f85149,stroke-width:1.5px,color:#ff9b95,rx:8,ry:8
+    classDef driftStyle fill:#0f1d33,stroke:#d8853b,stroke-width:1.5px,color:#e0a561,rx:8,ry:8
+
+    class Resp io
+    class parse,f1,f2,f3,f4,f5,f6,eng,lib,http,mcp step
+    class vchal,vsoft,vdecoy failStyle
+    class vdrift driftStyle
+    class vreal realStyle
+    class TitleBlock titleBlock
+    class Legend legend
+    class lg1,lg2,lg3,lg4 legendItem
+
+    style Doors fill:#0f1d33,stroke:#58a6ff,stroke-width:2px,color:#e6edf3,rx:12,ry:12
+    style Core  fill:#0f1d33,stroke:#d6a441,stroke-width:2px,color:#e6edf3,rx:12,ry:12
+    style Verdicts fill:#0f1d33,stroke:#3fb950,stroke-width:2px,color:#e6edf3,rx:12,ry:12
+
+    linkStyle default stroke:#8b949e,stroke-width:1.5px
