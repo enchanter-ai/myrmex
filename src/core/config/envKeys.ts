@@ -1,0 +1,6 @@
+export const ENV_KEYS = {
+  SIGNATURES_PATH: "MYRMEX_SIGNATURES_PATH",
+  PORT: "PORT",
+  HOST: "HOST",
+  LOG_LEVEL: "LOG_LEVEL",
+} as const;
