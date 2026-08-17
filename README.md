@@ -181,9 +181,20 @@ curl -s -X POST localhost:8080/score -H 'content-type: application/json' \
 docker build -t myrmex .
 docker run --rm -p 8080:8080 myrmex          # CMD node dist/service/server.js, non-root, EXPOSE 8080
 
-npx myrmex-serve                             # from the published package
 node dist/service/server.js                  # from a local build (npm run build first)
 ```
+
+> **Not published to npm.** `myrmex-serve` is unclaimed on the public npm
+> registry (404) — do **not** run `npx myrmex-serve`, it will not resolve
+> to this project. Build from source and run the local build instead:
+>
+> ```sh
+> git clone https://github.com/enchanter-ai/myrmex.git
+> cd myrmex
+> npm install
+> npm run build
+> node dist/service/server.js
+> ```
 
 ## The Numbers (eval)
 
